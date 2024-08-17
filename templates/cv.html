@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <title>CV</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        </style>
+        <style>
+            * {
+                font-family: "Poppins", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+            }
+        </style>
+    </head> 
+    <body>
+        <div class="w-[1240px] border border-black mx-auto">
+            <div class="w-full bg-gray-300 h-[100px] text-center">
+                <h1 class="my-1 font-bold text-4xl">{{name}}</h1>
+                <h2 class="font-semibold text-2xl">{{job_title}}</h2>
+            </div>
+            <div class="flex">
+
+
+
+
+                <div class="border border-green w-[30%] text-center px-1 bg-gray-300">
+                    {% comment %} Contacts {% endcomment %}
+                    <div class="">
+                        <h1 class="my-2 font-bold text-2xl">Contacts</h1><hr>
+                        <p>{{contact_num}}</p>
+                        <p>{{email}}</p>
+                        <p>{{address}}</p>
+                    </div>
+                    {% comment %} languages {% endcomment %}
+                    <div class="">
+                        <h1 class="my-2 font-bold text-2xl">Languages</h1><hr>
+                        <p>{{lang1}}</p>
+                        <p>{{lang2}}</p>
+                    </div>
+                    {% comment %} Technical Skills {% endcomment %}
+                    <div class="">
+                        <h1 class="my-2 font-bold text-2xl">Technical Skills</h1><hr>
+                        <p>{{tech1}}</p>
+                        <p>{{tech2}}</p>
+                    </div>
+                    {% comment %} Soft Skills {% endcomment %}
+                    <div class="">
+                        <h1 class="my-2 font-bold text-2xl">Soft Skills</h1><hr>
+                        <p>{{soft1}}</p>
+                        <p>{{soft2}}</p>
+                    </div>
+                </div>
+
+
+
+
+                <div class=" w-[70%] px-2">
+                    {% comment %} objective {% endcomment %}
+                    <div class="">
+                        <h1 class="my-2 font-bold text-2xl">Objective</h1>
+                        <p>{{objective}}</p>
+                    </div>
+                    {% comment %} Work Experience {% endcomment %}
+                    <div class="">
+                        <h1 class="my-2 font-bold text-2xl">Work Experience</h1><hr>
+                        <h2>{{job_title_2}}</h2>
+                        <h3>{{company_name}}</h3>    
+                        <h3>{{start_date_train}} : {{end_date_train}}</h3>
+                        <p>{{details_train}}</p>
+                    </div>
+                    {% comment %} Education {% endcomment %}
+                    <div class="">
+                        <h1 class="my-2 font-bold text-2xl">Education</h1><hr>
+                        <h2>{{faculty}}</h2>
+                        <h3>{{institute}}</h3>    
+                        <h3>{{start_date_edu}} : {{end_date_edu}}</h3>
+                        <p>{{details_edu}}</p>
+                    </div>
+                    {% comment %} courses {% endcomment %}
+                    <div class="">
+                        <h1 class="my-2 font-bold text-2xl">Courses</h1><hr>
+                        <p>{{course_name}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{course_provider}}</p>
+                    </div>
+                    {% comment %} interests {% endcomment %}
+                    <div class="">
+                        <h1 class="my-2 font-bold text-2xl">Interests</h1><hr>
+                        <p>{{int1}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{int2}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center my-3">
+                <button onclick="window.print()" class="bg-gray-300 px-3 py-1 rounded">Print</button>
+            </div>
+
+        </div>
+
+    </body>
+</html>

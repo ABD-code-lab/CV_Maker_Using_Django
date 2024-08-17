@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <title>CV Maker</title>
+    </head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        </style>
+        <style>
+            * {
+                font-family: "Poppins", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+            }
+            input {
+                padding-left: ;
+            }
+        </style>
+    <body>
+        <u>
+            <h1 class="text-center font-bold text-4xl my-3">Professional CV Maker</h1>
+        </u>
+        <div class="w-[1240px] mx-auto min-h-[200px] my-[50px]">
+            <div class="">
+                <form method="post">
+                    {% csrf_token %}
+                <h1 class="text-center font-bold text-3xl my-3">Personal Details</h1>
+                <label for="">Name</label>
+                <input type="text" name="name"  class="border border-black h-[40px] w-[300px] my-2 mr-2"/>
+                <label for="">Father Name</label>
+                <input type="text" name="fname" class="border border-black h-[40px] w-[300px] my-2 mr-2"/>
+                <label for="">Contact Number</label>
+                <input type="text" name="contact_number" class="border border-black h-[40px] w-[300px] my-2 mr-2" />
+                <br/>
+                <label for="">Email</label>
+                <input type="email" name="email"  class="border border-black h-[40px] w-[300px] my-2 mr-2"/>
+                <label for="">Linkdin (optional)</label>
+                <input type="text" name="linkdin"  class="border border-black h-[40px] w-[600px] my-2 mr-2"/>
+                <br/>
+                <label for="">Job title</label>
+                <input type="text" name="job_title"  class="border border-black h-[40px] w-[300px] my-2 mr-2"/>
+                <label for="">Address</label>
+                <input type="text" name="address" class="border border-black h-[40px] w-[600px] my-2 mr-2" />
+                <br>
+                {% comment %} <label for="">Nationality</label>
+                <input type="text" name="nationality"  class="border border-black h-[40px] w-[300px] my-2 mr-2"/>
+                <label for="">Birthday</label>
+                <input type="text" name="birthday"  class="border border-black h-[40px] w-[300px] my-2 mr-2"/>
+                <label for="">Blood Group</label>
+                <input type="text" name="blood_group"  class="border border-black h-[40px] w-[300px] my-2 mr-2"/>
+                <br/> {% endcomment %}
+                <label for="">Objective</label>
+                <input type="text" name="objective"  class="border border-black h-[100px] w-[900px] my-2 mr-2"/>  
+                {% comment %} --------- {% endcomment %}
+                <h1 class="text-center font-bold text-3xl my-3">Latest Education</h1>
+                <label for="">University/College/School</label>
+                <input type="text" name="institute"  class="border border-black h-[40px] w-[450px] my-2 mr-2"/>
+                <label for="">Faculty of</label>
+                <input type="text" name="faculty"  class="border border-black h-[40px] w-[450px] my-2 mr-2"/>
+                <br/>
+                <label for="">Start</label>
+                <input type="date" name="start_date_edu"  class="border border-black h-[40px] w-[450px] my-2 mr-2"/>  
+                <label for="">End</label>
+                <input type="date" name="end_date_edu" class="border border-black h-[40px] w-[450px] my-2 mr-2" />  
+                <br/>
+                <label for="">Details</label>
+                <input type="text" name="details_edu"  class="border border-black h-[100px] w-[925px] my-2 mr-2"/>
+                {% comment %} --------- {% endcomment %}
+                <h1 class="text-center font-bold text-3xl my-3">Main Langugaes</h1>
+                <div class="mx-auto w-[1240px] text-center">
+                    <input type="text" name="lang1" class="border border-black h-[40px] w-[300px] my-2 mr-2">  
+                    <input type="text" name="lang2" class="border border-black h-[40px] w-[300px] my-2 mr-2">
+                </div>
+                <h1 class="text-center font-bold text-3xl my-3">Soft Skills</h1>
+                <div class="mx-auto w-[1240px] text-center">
+                    <input type="text" name="soft1" class="border border-black h-[40px] w-[300px] my-2 mr-2">  
+                    <input type="text" name="soft2" class="border border-black h-[40px] w-[300px] my-2 mr-2">
+                </div>
+                <h1 class="text-center font-bold text-3xl my-3">Technical Skills</h1>
+                <div class="mx-auto w-[1240px] text-center">
+                    <input type="text" name="tech1" class="border border-black h-[40px] w-[300px] my-2 mr-2">  
+                    <input type="text" name="tech2" class="border border-black h-[40px] w-[300px] my-2 mr-2">  
+                </div>
+                {% comment %} --------- {% endcomment %}
+                <br/>
+                <h1 class="text-center font-bold text-3xl my-3">Work and training</h1>
+                <label for="">Company Name</label>
+                <input type="text" name="company_name" class="border border-black h-[40px] w-[450px] my-2 mr-2">
+                <label for="">Job title</label>
+                <input type="text" name="job_title_2" class="border border-black h-[40px] w-[450px] my-2 mr-2">
+                <br>
+                <label for="">Start</label>
+                <input type="date" name="start_date_train"  class="border border-black h-[40px] w-[450px] my-2 mr-2"/>  
+                <label for="">End</label>
+                <input type="date" name="end_date_train"  class="border border-black h-[40px] w-[450px] my-2 mr-2"/>
+                <br>
+                <label for="">Details</label>
+                <input type="text" name="details_train"  class="border border-black h-[100px] w-[950px] my-2 mr-2"/>
+                {% comment %} ---------- {% endcomment %}
+                <h1 class="text-center font-bold text-3xl my-3">Courses</h1>
+                <div class="text-center font-bold text-xl my-3">
+                    <label for="">Course Name</label>
+                    <input type="text" name="course_name" class="border border-black h-[40px] w-[300px] my-2 mr-2">
+                    <label for="">Course Provider</label>
+                    <input type="text" name="course_provider" class="border border-black h-[40px] w-[300px] my-2 mr-2">
+                </div>
+                {% comment %} ---------- {% endcomment %}
+                <h1 class="text-center font-bold text-3xl my-3">Interests</h1>
+                <div class="w-[1240px] mx-auto text-center">
+                    <input type="text" name="int1" class="border border-black h-[40px] w-[300px] my-2 mr-2">
+                    <input type="text" name="int2" class="border border-black h-[40px] w-[300px] my-2 mr-2">
+                </div>
+            </div>
+            <div class="text-center">
+                <button type="submit" name="btn" id="bttn" class="bg-gray-300 px-3 py-1 rounded">Submit</button>
+                </form>
+            </div>
+        </div>
+    <script>
+        document.getElementById('bttn').classList.add('active');
+    </script>
+    </body>
+</html>
